@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    background-color: #393E46;
+    color: #EEEEEE;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#particles canvas {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
