@@ -9,12 +9,8 @@ function AppBar() {
     setIsOpen(!isOpen);
   };
 
-  const openResume = () => {
-    window.open({ CV }, "_blank");
-  }
-
   return (
-    <nav style={{ backgroundColor: "#222831", color: "#EEEEEE" }} className="font-rubik font-medium py-2 fixed top-0 left-0 w-full z-50">
+    <nav style={{ backgroundColor: "#222831", color: "#EEEEEE" }} className="font-rubik font-medium py-2 fixed top-0 w-full z-50">
       <div className="flex justify-between mx-7">
         <div>
           <img src={Logo} className='h-10 w-10 white'></img>
