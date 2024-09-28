@@ -7,6 +7,7 @@ import HomePage from "./Home/Home";
 import AboutMe from "./AboutMe/AboutMe";
 import Project from "./Project/Project";
 import ParticlesComponent from './Component/Particles';
+import Contact from './Contact/Contact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
       <HomePage />
       <AboutMe />
       <Project />
+      <Contact />
       <ParticlesComponent id="particles" />
     </div>
   </React.StrictMode>

@@ -84,7 +84,7 @@ function Project() {
                     </>
                 )}
 
-                <button onClick={toggleShowMoreProjects} className="border-2 p-[7px] rounded-xl px-4 font-medium hover:text-cyan-400 mx-auto block bg-[#222831]">
+                <button onClick={toggleShowMoreProjects} className="border-2 p-[7px] rounded-xl px-4 font-medium hover:text-cyan-400 mx-auto block bg-[#222831] text-xl">
                     {showMoreProjects ? "Show Less" : "More Projects"}
                 </button>
             </div>
