@@ -15,7 +15,7 @@ function HomePage() {
                 I Am{' '}
                 <ReactTyped 
                 className="text-cyan-400"
-                    strings={['Software Engineer', 'Android Developer', 'Web Developer']}
+                    strings={['Software Engineer', 'Mobile Developer', 'Web Developer']}
                     typeSpeed={70}
                     backSpeed={50}
                     loop
