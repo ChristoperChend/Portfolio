@@ -20,6 +20,7 @@ function AppBar() {
           <a href="#home" className="hover:text-cyan-400 transition-colors duration-300">Home</a>
           <a href="#about" className="hover:text-cyan-400 transition-colors duration-300">About</a>
           <a href="#project" className="hover:text-cyan-400 transition-colors duration-300">Project</a>
+          <a href="#certificate" className="hover:text-cyan-400 transition-colors duration-300">Certificate</a>
           <a href="#contact" className="hover:text-cyan-400 transition-colors duration-300">Contact</a>
         </div>
 
@@ -38,6 +39,7 @@ function AppBar() {
             <a href="#home" className="hover:text-cyan-400 transition-colors duration-300">Home</a>
             <a href="#about" className="hover:text-cyan-400 transition-colors duration-300">About</a>
             <a href="#project" className="hover:text-cyan-400 transition-colors duration-300">Project</a>
+            <a href="#cerificate" className="hover:text-cyan-400 transition-colors duration-300">Certificate</a>
             <a href="#contact" className="hover:text-cyan-400 transition-colors duration-300">Contact</a>
           </div>
         </div>
