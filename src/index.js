@@ -6,24 +6,75 @@ import reportWebVitals from "./reportWebVitals";
 import HomePage from "./Home/Home";
 import AboutMe from "./AboutMe/AboutMe";
 import Project from "./Project/Project";
-import ParticlesComponent from './Component/Particles';
+import Certificate from './Certificate/Certificate';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
-import Certificate from './Certificate/Certificate'
+import ParticlesComponent from './Component/Particles';
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+} from 'react-router-dom';
+import { Main } from '@tsparticles/engine';
+
+function Layout() {
+  return (
+    <>
+      <div className='flex flex-col min-h-screen'>
+        <AppBar />
+        <main className='flex-grow'>
+          <Outlet />
+        </main>
+        <Footer />
+        <ParticlesComponent id="particles" />
+      </div>
+    </>
+  );
+}
+
+function NotFound() {
+  return <div>404 - Page Not Found!</div>;
+}
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "",
+        element: <HomePage />,
+      },
+      {
+        path: "home",
+        element: <HomePage />,
+      },
+      {
+        path: "about",
+        element: <AboutMe />,
+      },
+      {
+        path: "project",
+        element: <Project />,
+      },
+      {
+        path: "certificate",
+        element: <Certificate />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      }
+    ],
+    errorElement: <NotFound />,
+  }
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <div>
-      <AppBar />
-      <HomePage />
-      <AboutMe />
-      <Project />
-      <Certificate/>
-      <Contact />
-      <Footer />
-      <ParticlesComponent id="particles" />
-    </div>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

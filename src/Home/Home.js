@@ -1,6 +1,5 @@
 import React from "react";
 import { ReactTyped } from "react-typed";
-import photo from '../Assets/NORE_FEREN03399.JPG'
 import DeveloperCard from "../Card/MyCard";
 import gitHubIcon from '../Assets/Github.svg'
 import instagramIcon from '../Assets/Instagram.svg'
@@ -8,8 +7,8 @@ import linkedInIcon from '../Assets/LinkedIn.svg'
 import discordIcon from '../Assets/Discord.svg'
 
 function HomePage() {
-    return <section id="home" className="mx-40 flex justify-between gap-x-32 mb-24 items-center">
-        <div className="font-jetBrains space-y-3 mt-32">
+    return <section id="home" className="mx-40 flex gap-x-32 h-screen items-center">
+        <div className="font-jetBrains space-y-3 mt-20">
             <h1 className="text-3xl font-bold">WELCOME!</h1>
             <h2 className="text-5xl font-bold">
                 I Am{' '}
@@ -31,7 +30,7 @@ function HomePage() {
             </h3>
 
             <div>
-                <span className="flex space-x-7 ml-5">
+                <span className="flex space-x-7">
                     <a
                         href="https://github.com/ChristoperChend"
                         target="_blank"

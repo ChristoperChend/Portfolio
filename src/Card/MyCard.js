@@ -6,8 +6,8 @@ import location from '../Assets/Location.svg'
 
 const DeveloperCard = () => {
     return (
-        <div className="font-jetBrains justify-center mt-32">
-            <div className="text-white p-7 rounded-tl-[150px] rounded-br-[150px] w-[350px] border-x-4 border-cyan-400">
+        <div className="items-center">
+            <div className="font-jetBrains text-white p-7 rounded-tl-[150px] rounded-br-[150px] w-[350px] border-x-4 border-cyan-400">
 
                 <div className="flex justify-center">
                     <img

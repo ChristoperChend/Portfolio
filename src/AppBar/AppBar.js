@@ -1,27 +1,40 @@
-import React, { useState } from 'react';
-import Logo from '../Assets/Logo.svg'
-import CV from '../Assets/Profile.pdf'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function AppBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [color, setColor] = useState('white');
+
+  const colors = ['red', 'green', 'blue', 'purple', 'orange'];
+
+  useEffect(() => {
+    const changeColor = () => {
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      setColor(randomColor);
+    };
+
+    const colorInterval = setInterval(changeColor, 600);
+
+    return () => clearInterval(colorInterval);
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav style={{ backgroundColor: "#222831", color: "#EEEEEE" }} className="font-rubik font-medium py-2 fixed top-0 w-full z-50">
+    <nav style={{ backgroundColor: "#252525", color: "#EEEEEE" }} className="font-rubik font-medium py-2 fixed top-0 w-full z-50">
       <div className="flex justify-between mx-7">
-        <div>
-          <img src={Logo} className='h-10 w-10 white'></img>
+        <div className='flex items-center'>
+          <h1 className='font-indie text-4xl' style={{ color: color }}>Chr.</h1>
         </div>
 
         <div className="hidden md:flex space-x-10 items-center">
-          <a href="#home" className="hover:text-cyan-400 transition-colors duration-300">Home</a>
-          <a href="#about" className="hover:text-cyan-400 transition-colors duration-300">About</a>
-          <a href="#project" className="hover:text-cyan-400 transition-colors duration-300">Project</a>
-          <a href="#certificate" className="hover:text-cyan-400 transition-colors duration-300">Certificate</a>
-          <a href="#contact" className="hover:text-cyan-400 transition-colors duration-300">Contact</a>
+          <Link to="/" className="hover:text-cyan-400 transition-colors duration-300">Home</Link>
+          <Link to="/about" className="hover:text-cyan-400 transition-colors duration-300">About</Link>
+          <Link to="/project" className="hover:text-cyan-400 transition-colors duration-300">Project</Link>
+          <Link to="/certificate" className="hover:text-cyan-400 transition-colors duration-300">Certificate</Link>
+          <Link to="/contact" className="hover:text-cyan-400 transition-colors duration-300">Contact</Link>
         </div>
 
         <div className="md:hidden self-center">
@@ -36,11 +49,11 @@ function AppBar() {
       {isOpen && (
         <div className="md:hidden">
           <div className="flex flex-col items-center space-y-2 py-3">
-            <a href="#home" className="hover:text-cyan-400 transition-colors duration-300">Home</a>
-            <a href="#about" className="hover:text-cyan-400 transition-colors duration-300">About</a>
-            <a href="#project" className="hover:text-cyan-400 transition-colors duration-300">Project</a>
-            <a href="#cerificate" className="hover:text-cyan-400 transition-colors duration-300">Certificate</a>
-            <a href="#contact" className="hover:text-cyan-400 transition-colors duration-300">Contact</a>
+            <Link to="/" className="hover:text-cyan-400 transition-colors duration-300">Home</Link>
+            <Link to="/about" className="hover:text-cyan-400 transition-colors duration-300">About</Link>
+            <Link to="/project" className="hover:text-cyan-400 transition-colors duration-300">Project</Link>
+            <Link to="/certificate" className="hover:text-cyan-400 transition-colors duration-300">Certificate</Link>
+            <Link to="/contact" className="hover:text-cyan-400 transition-colors duration-300">Contact</Link>
           </div>
         </div>
       )}

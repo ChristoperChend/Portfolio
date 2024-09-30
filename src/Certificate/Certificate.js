@@ -37,7 +37,7 @@ function Sertificate() {
           className="swiper_container"
         >
           <SwiperSlide>
-            <img src={pythonCertificate} alt="Python Certificate" className='' />
+            <img src={pythonCertificate} alt="Python Certificate" />
           </SwiperSlide>
           <SwiperSlide>
             <img src={pythonCertificate1} alt="Python Certificate 1" />

@@ -6,12 +6,14 @@ import yourList from '../Assets/YourList.png'
 import codeReengineering from '../Assets/CodeReengineering.png'
 import eRamen from '../Assets/ERamen.png'
 import calm from '../Assets/Calm.png'
+import portfolio from '../Assets/Portfolio.png'
 import flutter from '../Assets/Flutter.svg'
 import firebase from '../Assets/Firebase.svg'
 import html from '../Assets/Html.svg'
 import css from '../Assets/Css.svg'
 import js from '../Assets/Js.svg'
 import figma from '../Assets/Figma.svg'
+import react from '../Assets/React.svg'
 
 
 function Project() {
@@ -21,20 +23,11 @@ function Project() {
         setShowMoreProjects(!showMoreProjects);
     };
 
-    return <section id="project" className="mx-40 font-jetBrains">
+    return <section id="project" className="font-jetBrains flex flex-row justify-center items-center gap-x-16 mx-40 pt-28">
         <div>
             <h1 className="text-4xl font-bold mb-10">Explore My Project</h1>
 
-            <div className="space-y-20">
-                <ProjectCard
-                    projectImage={resQ}
-                    projectName="ResQ - Emergency Application"
-                    projectExplaination="ResQ is a mobile emergency response application that can provide guidance to users in the event of an emergency."
-                    projectIcon1={flutter}
-                    projectIcon2={firebase}
-                    projectSourceCode="https://github.com/ChristoperChend/ResQ"
-                />
-
+            <div className="space-y-20 pb-10">
                 <ProjectCard
                     projectImage={allergyDiary}
                     projectName="Allergy Diary - Health Application"
@@ -45,17 +38,36 @@ function Project() {
                 />
 
                 <ProjectCard
-                    projectImage={yourList}
-                    projectName="YourList - ToDo List Website"
-                    projectExplaination="To-Do List website is to allow users to manage tasks easily. It helps in organizing daily activities."
-                    projectIcon1={html}
-                    projectIcon2={css}
-                    projectIcon3={js}
-                    projectSourceCode="https://github.com/ChristoperChend/ChristoperChend-GDSCUI-WebDev-ChristoperChendra.github.io"
+                    projectImage={resQ}
+                    projectName="ResQ - Emergency Application"
+                    projectExplaination="ResQ is a mobile emergency response application that can provide guidance to users in the event of an emergency."
+                    projectIcon1={flutter}
+                    projectIcon2={firebase}
+                    projectSourceCode="https://github.com/ChristoperChend/ResQ"
+                />
+
+                <ProjectCard
+                    projectImage={portfolio}
+                    projectName="Portfolio - Personal Website"
+                    projectExplaination="This is my personal portfolio where I showcase my projects and skills in front-end development using React."
+                    projectIcon1={react}
+                    projectSourceCode="https://github.com/ChristoperChend/allergy-diary"
+                    projectLiveDemo="http://chend-portfolio.vercel.app/"
                 />
 
                 {showMoreProjects && (
                     <>
+                        <ProjectCard
+                            projectImage={yourList}
+                            projectName="YourList - ToDo List Website"
+                            projectExplaination="To-Do List website is to allow users to manage tasks easily. It helps in organizing daily activities."
+                            projectIcon1={html}
+                            projectIcon2={css}
+                            projectIcon3={js}
+                            projectSourceCode="https://github.com/ChristoperChend/ChristoperChend-GDSCUI-WebDev-ChristoperChendra.github.io"
+                            projectLiveDemo="https://christoperchend.github.io/ChristoperChend-GDSCUI-WebDev-ChristoperChendra.github.io/"
+                        />
+
                         <ProjectCard
                             projectImage={codeReengineering}
                             projectName="Bad Code - Explanation Website"
@@ -63,6 +75,7 @@ function Project() {
                             projectIcon1={html}
                             projectIcon2={css}
                             projectSourceCode="https://github.com/ChristoperChend/Code-Reengineering"
+                            projectLiveDemo="https://christoperchend.github.io/Code-Reengineering/"
                         />
 
                         <ProjectCard
@@ -72,6 +85,7 @@ function Project() {
                             projectIcon1={html}
                             projectIcon2={css}
                             projectSourceCode="https://github.com/ChristoperChend/ERamen"
+                            projectLiveDemo="https://christoperchend.github.io/ERamen/"
                         />
 
                         <ProjectCard
@@ -84,7 +98,7 @@ function Project() {
                     </>
                 )}
 
-                <button onClick={toggleShowMoreProjects} className="border-2 p-[7px] rounded-xl px-4 font-medium hover:text-cyan-400 mx-auto block bg-[#222831] text-xl">
+                <button onClick={toggleShowMoreProjects} className="border-2 p-[7px] rounded-xl px-4 font-medium hover:text-cyan-400 mx-auto block bg-[#222831] text-xl hover:scale-110 transition-all duration-200">
                     {showMoreProjects ? "Show Less" : "More Projects"}
                 </button>
             </div>

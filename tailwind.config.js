@@ -8,7 +8,9 @@ module.exports = {
       fontFamily: {
         rubik: ['Rubik', 'sans-serif'],
         robotoMono: ['Roboto Mono', 'sans-serif'],
-        jetBrains: ['JetBrains Mono', 'sans-serif']
+        jetBrains: ['JetBrains Mono', 'sans-serif'],
+        ibm: ['IBM Plex Mono', 'sans-serif'],
+        indie: ['Indie Flower', 'sans-serif']
       },
     },
   },
