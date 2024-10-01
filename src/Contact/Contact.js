@@ -29,13 +29,13 @@ function Contact() {
         }
     };
 
-    return <section id="contact" className="font-jetBrains mx-40 gap-x-32 my-24">
+    return <section id="contact" className="font-jetBrains my-24 mx-12 md:mx-20 lg:mx-32 xl:mx-40">
         <div className="text-center">
-            <h1 className="font-bold text-5xl mb-20">Contact</h1>
-            <a className="text-3xl font-medium p-3 px-8 bg-[#222831] rounded-tr-[40px] rounded-bl-[40px] border-[3px] border-cyan-400">Send Me A Message</a>
+            <h1 className="font-bold text-3xl md:text-4xl lg:text-4xl xl:text-5xl mb-10">Contact</h1>
+            <a className="md:text-xl lg:text-2xl xl:text-3xl font-medium p-3 px-8 bg-[#222831] rounded-tr-[40px] rounded-bl-[40px] border-[3px] border-cyan-400">Send Me A Message</a>
 
             <form onSubmit={onSubmit}>
-                <div className="flex justify-between mt-16 space-x-10 mb-7">
+                <div className="mt-16 mb-7 xl:space-x-10 md:flex md:space-x-8 lg:flex lg:space-x-8 xl:flex">
                     <div className="mb-4 w-full mr-2">
                         <label className="block font-medium text-left">
                             Your name

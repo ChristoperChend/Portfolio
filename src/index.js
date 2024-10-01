@@ -16,7 +16,6 @@ import {
   RouterProvider,
   Outlet,
 } from 'react-router-dom';
-import { Main } from '@tsparticles/engine';
 
 function Layout() {
   return (

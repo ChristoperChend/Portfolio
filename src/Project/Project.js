@@ -23,9 +23,9 @@ function Project() {
         setShowMoreProjects(!showMoreProjects);
     };
 
-    return <section id="project" className="font-jetBrains flex flex-row justify-center items-center gap-x-16 mx-40 pt-28">
+    return <section id="project" className="mx-16 font-jetBrains flex flex-row justify-center items-center gap-x-16 pt-28 md:mx-24 lg:mx-32 xl:mx-40">
         <div>
-            <h1 className="text-4xl font-bold mb-10">Explore My Project</h1>
+            <h1 className="mb-6 text-xl font-bold sm:mb-10 sm:text-4xl">Explore My Project</h1>
 
             <div className="space-y-20 pb-10">
                 <ProjectCard

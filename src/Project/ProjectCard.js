@@ -2,11 +2,11 @@ import React from "react";
 
 function ProjectCard({ projectImage, projectName, projectExplaination, projectIcon1, projectIcon2, projectIcon3, projectSourceCode, projectLiveDemo }) {
   return (
-    <div className="flex space-x-20">
-      <img src={projectImage} className="w-[450px] h-80 rounded-3xl"></img>
+    <div className="lg:space-x-10 lg:flex xl:space-x-20 xl:flex">
+      <img src={projectImage} className="rounded-3xl w-max h-max lg:w-[450px] xl:w-[450px] xl:h-80"></img>
 
-      <div>
-        <h1 className="text-3xl font-bold my-3">{projectName}</h1>
+      <div className="">
+        <h1 className="font-bold my-3 md:text-2xl lg:text-xl xl:text-3xl">{projectName}</h1>
 
         <span className="text-red-400">&lt;p&gt;</span>
         <h2 className="ml-10 my-2">{projectExplaination}</h2>
