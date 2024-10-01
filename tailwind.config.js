@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: '400px'
+      },
+
       fontFamily: {
         rubik: ['Rubik', 'sans-serif'],
         robotoMono: ['Roboto Mono', 'sans-serif'],

@@ -14,7 +14,7 @@ import aspNet from '../../../Assets/AspNet.svg'
 import c from '../../../Assets/c.svg'
 
 function TechStack() {
-    return <div className="grid grid-cols-3 mt-4 mb-4 gap-x-5 justify-start xl:gap-x-8 xl:grid-cols-4">
+    return <div className="grid grid-cols-2 mt-4 mb-4 gap-x-5 justify-start lg:grid-cols-3 xl:gap-x-8 xl:grid-cols-3">
         <SkillCard icon={flutter} name="Flutter" level="Intermediate"/>
         <SkillCard icon={react} name="React" level="Intermediate"/>
         <SkillCard icon={html} name="HTML" level="Advanced"/>
