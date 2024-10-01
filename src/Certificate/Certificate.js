@@ -19,7 +19,7 @@ function Sertificate() {
   return (
     <section id='certificate' className='flex mx-14 justify-center xl:mb-10'>
       <div className="container mx-auto mt-28">
-        <h1 className="font-jetBrains text-4xl font-bold mb-14 text-center">Certificate Gallery</h1>
+        <h1 className="font-jetBrains font-bold mb-14 text-center md:text-4xl lg:text-4xl xl:text-4xl">Certificate Gallery</h1>
 
         <Lottie
           animationData={swiper}
@@ -41,7 +41,7 @@ function Sertificate() {
             slideShadows: false,
           }}
           breakpoints={{
-            400: {
+            200: {
               slidesPerView: 1,
               spaceBetween: 0
             },
