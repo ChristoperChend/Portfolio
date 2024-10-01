@@ -17,8 +17,8 @@ import flCertificate from '../Assets/FLCertificate.png';
 
 function Sertificate() {
   return (
-    <section id='certificate' className='flex mx-14 justify-center xl:mb-10'>
-      <div className="container mx-auto mt-28">
+    <section id='certificate' className='flex mx-2 justify-center xl:mb-10'>
+      <div className="container mx-2 mt-28 md:mx-auto lg:mx-auto xl:mx-auto ">
         <h1 className="font-jetBrains font-bold mb-14 text-center md:text-4xl lg:text-4xl xl:text-4xl">Certificate Gallery</h1>
 
         <Lottie
