@@ -53,7 +53,7 @@ function Project() {
                     projectName="Portfolio - Personal Website"
                     projectExplaination="This is my personal portfolio where I showcase my projects and skills in front-end development using React."
                     projectIcon1={react}
-                    projectSourceCode="https://github.com/ChristoperChend/allergy-diary"
+                    projectSourceCode="https://github.com/ChristoperChend/Portfolio"
                     projectLiveDemo="http://chend-portfolio.vercel.app/"
                 />
 

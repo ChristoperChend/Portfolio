@@ -1,11 +1,12 @@
 import React from "react";
 import Skills from "./Skills/Skills";
+import foto from '../Assets/foto.jpg'
 
 function AboutMe() {
     return <section className="mt-28 mx-14 justify-center lg:mx-24 xl:mx-40">
         <div className="gap-x-10 flex flex-col lg:flex-row md:flex-row lg:gap-x-14 xl:flex-row xl:gap-x-16">
             <div className="flex-shrink-0 flex justify-center mb-5">
-                <img className="mt-5 w-[180px] h-[280px] md:w-[240px] md:h-[340px] lg:w-[270px] lg:h-[380px] xl:w-[320px] xl:h-[500px]"></img>
+                <img src={foto} className="rounded-xl mt-5 w-[270px] h-[300px] md:w-[270px] md:h-[340px] lg:w-[300px] lg:h-[380px] xl:w-[350px] xl:h-[450px]"></img>
             </div>
 
             <div className="font-jetBrains space-y-3 md:mt-5 xl:space-y-7 xl:mt-2">
