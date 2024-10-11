@@ -14,6 +14,7 @@ import css from '../Assets/Css.svg'
 import js from '../Assets/Js.svg'
 import figma from '../Assets/Figma.svg'
 import react from '../Assets/React.svg'
+import tailwind from '../Assets/Tailwind.svg'
 
 
 function Project() {
@@ -53,6 +54,7 @@ function Project() {
                     projectName="Portfolio - Personal Website"
                     projectExplaination="This is my personal portfolio where I showcase my projects and skills in front-end development using React."
                     projectIcon1={react}
+                    projectIcon2={tailwind}
                     projectSourceCode="https://github.com/ChristoperChend/Portfolio"
                     projectLiveDemo="http://chend-portfolio.vercel.app/"
                 />
