@@ -20,7 +20,7 @@ const DeveloperCard = () => {
 
                 <div className="text-center mt-4">
                     <h2 className="font-semibold md:text-lg xl:text-2xl">Christoper Chendra</h2>
-                    <p className="text-cyan-400">Sofware Engineer</p>
+                    <p className="text-cyan-400">Application Developer</p>
                 </div>
 
 
