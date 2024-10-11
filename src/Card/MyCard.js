@@ -1,5 +1,5 @@
 import React from 'react';
-import CV from '../Assets/Profile.pdf'
+import CV from '../Assets/CV.pdf'
 import envelop from '../Assets/Envelop.svg'
 import job from '../Assets/Suitcase.svg'
 import location from '../Assets/Location.svg'

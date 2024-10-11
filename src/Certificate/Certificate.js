@@ -14,6 +14,7 @@ import pythonCertificate2 from '../Assets/PythonCertificate2.png';
 import hackFestCertificate from '../Assets/HackFestCertificate.png';
 import miniCompCertificate from '../Assets/MiniCompCertificate.png';
 import flCertificate from '../Assets/FLCertificate.png';
+import fpCertificate from '../Assets/FPCertificate.png';
 
 function Sertificate() {
   return (
@@ -75,6 +76,9 @@ function Sertificate() {
           </SwiperSlide>
           <SwiperSlide>
             <img src={flCertificate} alt="FL Certificate" className="w-full h-auto object-cover rounded-lg shadow-lg" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={fpCertificate} alt="FL Certificate" className="w-full h-auto object-cover rounded-lg shadow-lg" />
           </SwiperSlide>
         </Swiper>
       </div>

@@ -9,11 +9,11 @@ function HomePage() {
     return <section id="home" className="mt-24 mx-14 h-screen items-center sm:flex sm:mt-0 md:mx-12 md:gap-x-12 xl:mx-40 xl:gap-x-32">
         <div className="font-jetBrains space-y-3 xl:mt-20">
             <h1 className="text-lg font-bold xl:text-3xl md:text-2xl">WELCOME!</h1>
-            <h2 className="text-xl font-bold xl:text-5xl md:text-2xl">
+            <h2 className="text-xl font-bold xl:text-4xl md:text-2xl">
                 I Am{' '}
                 <ReactTyped
                     className="text-cyan-400"
-                    strings={['Software Engineer', 'Mobile Developer', 'Web Developer']}
+                    strings={['Software Developer', 'Application Developer', 'Webp Developer']}
                     typeSpeed={70}
                     backSpeed={50}
                     loop

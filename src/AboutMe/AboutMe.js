@@ -14,11 +14,11 @@ function AboutMe() {
                 <h2 style={{ backgroundColor: "#252525" }} className="p-5 rounded-3xl text-xs md:text-sm lg:text-sm xl:p-10 xl:text-base">
                     <span className="text-red-400">&lt;h2&gt;</span>
                     <h2 className="ml-10 my-2 font-light">
-                        I am a Computer Science student at Binus University with a strong passion for <b className="font-ibm text-orange-600 bg-[#404040] px-1 rounded-md font-bold">Mobile Development</b>.
-                        My focus lies in mastering the principles and practices that make mobile app development efficient,
+                        I am a Computer Science student at Binus University with a strong passion for <b className="font-ibm text-orange-600 bg-[#404040] px-1 rounded-md font-bold">Application Developer</b>.
+                        My focus lies in mastering the principles and practices that make app development efficient,
                         user-friendly, and scalable.
                         <br /><br />
-                        I'm passionate about creating seamless mobile experiences, and my hands-on work has given me the
+                        I'm passionate about creating seamless application experiences, and my hands-on work has given me the
                         practical skills needed to deliver polished, professional apps.
                     </h2>
                     <span className="text-red-400">&lt;/h2&gt;</span>
