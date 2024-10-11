@@ -22,8 +22,7 @@ function HomePage() {
             <div className="md:text-base xl:text-lg">
                 <span className="text-red-400">&lt;h3&gt;</span>
                 <h3 className="ml-10 my-2">
-                    Hello! I'm Christoper Chendra, with a passion for developing in various languages
-                    that can be used for commercial businesses.
+                    Hello, I'm Christoper Chendra, passionate about developing solutions in multiple programming languages to drive commercial business success.
                 </h3>
                 <span className="text-red-400">&lt;/h3&gt;</span>
             </div>
