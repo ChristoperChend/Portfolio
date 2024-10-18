@@ -36,7 +36,7 @@ function Project() {
                     projectIcon1={flutter}
                     projectIcon2={firebase}
                     projectSourceCode="https://github.com/ChristoperChend/allergy-diary"
-                    projectLiveDemo="https://binusianorg-my.sharepoint.com/personal/dwi_khaerakinanti_binus_ac_id/_layouts/15/stream.aspx?id=%2Fpersonal%2Fdwi_khaerakinanti_binus_ac_id%2FDocuments%2FVideo%20Demo%20Allergy%20Diary%2Emov&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E7368e68b-c6a0-454c-accb-ff17028d9b02"
+                    projectLiveDemo="https://binusianorg-my.sharepoint.com/personal/dwi_khaerakinanti_binus_ac_id/_layouts/15/guestaccess.aspx?share=EVqe6BrPY2dOkRwcm3kB_4wBydJZsmTLkMwvRQte1VTYBQ&e=fLxEvx"
                 />
 
                 <ProjectCard
