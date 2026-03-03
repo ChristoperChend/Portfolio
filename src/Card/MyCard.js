@@ -27,15 +27,15 @@ const DeveloperCard = () => {
                 <div className="mt-4 flex justify-center">
                     <ul className="text-xs xl:text-sm space-y-2 md:text-xs">
                         <li className="flex items-center space-x-2">
-                            <img src={envelop} className='w-4'></img>
+                            <img src={envelop} alt="email icon" className='w-4'></img>
                             <span>christoper.chendra15@gmail.com</span>
                         </li>
                         <li className="flex items-center space-x-2">
-                        <img src={location} className='w-4'></img>
+                            <img src={location} alt="location icon" className='w-4'></img>
                             <span>Indonesia</span>
                         </li>
                         <li className="flex items-center space-x-2">
-                            <img src={job} className='w-4'></img>
+                            <img src={job} alt="job icon" className='w-4'></img>
                             <span>Full-time / Freelancer</span>
                         </li>
                     </ul>

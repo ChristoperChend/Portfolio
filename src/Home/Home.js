@@ -33,6 +33,7 @@ function HomePage() {
                     <a
                         href="https://github.com/ChristoperChend"
                         target="_blank"
+                        rel="noopener noreferrer"
                         aria-label="GitHub profile">
                         <img
                             src={gitHubIcon}
@@ -43,6 +44,7 @@ function HomePage() {
                     <a
                         href="https://www.linkedin.com/in/christoper-chendra/"
                         target="_blank"
+                        rel="noopener noreferrer"
                         aria-label="LinkedIn profile">
                         <img
                             src={linkedInIcon}
@@ -53,6 +55,7 @@ function HomePage() {
                     <a
                         href="https://www.discord.com/users/443479853048659978"
                         target="_blank"
+                        rel="noopener noreferrer"
                         aria-label="Discord profile">
                         <img
                             src={discordIcon}

@@ -32,7 +32,7 @@ function Contact() {
     return <section id="contact" className="font-jetBrains my-24 mx-12 md:mx-20 lg:mx-32 xl:mx-40">
         <div className="text-center">
             <h1 className="font-bold text-3xl md:text-4xl lg:text-4xl xl:text-5xl mb-10">Contact</h1>
-            <a className="md:text-xl lg:text-2xl xl:text-3xl font-medium p-3 px-8 bg-[#222831] rounded-tr-[40px] rounded-bl-[40px] border-[3px] border-cyan-400">Send Me A Message</a>
+            <div className="md:text-xl lg:text-2xl xl:text-3xl font-medium p-3 px-8 bg-[#222831] rounded-tr-[40px] rounded-bl-[40px] border-[3px] border-cyan-400 inline-block">Send Me A Message</div>
 
             <form onSubmit={onSubmit}>
                 <div className="mt-16 mb-7 xl:space-x-10 md:flex md:space-x-8 lg:flex lg:space-x-8 xl:flex">
