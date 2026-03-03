@@ -25,7 +25,7 @@ function AppBar() {
       clearInterval(colorInterval);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [colors]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -57,7 +57,6 @@ function AppBar() {
           </h1>
         </div>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 lg:space-x-12 items-center">
           {navLinks.map((link) => (
             <Link
@@ -71,7 +70,6 @@ function AppBar() {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
           <button
             onClick={toggleMenu}
@@ -87,7 +85,6 @@ function AppBar() {
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
       <div
         className={`md:hidden absolute top-full left-0 w-full bg-[#222831]/95 backdrop-blur-xl border-b border-gray-800 shadow-xl transition-all duration-300 ease-in-out overflow-hidden flex flex-col items-center ${isOpen ? 'max-h-80 opacity-100 py-4' : 'max-h-0 opacity-0 py-0 border-transparent'
           }`}
