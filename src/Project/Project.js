@@ -15,6 +15,9 @@ import js from '../Assets/Js.svg'
 import figma from '../Assets/Figma.svg'
 import react from '../Assets/React.svg'
 import tailwind from '../Assets/Tailwind.svg'
+import laravel from '../Assets/laravel-2.svg'
+import mysql from '../Assets/mysql-3.svg'
+import pawslife from '../Assets/PawsLife.png'
 
 
 function Project() {
@@ -24,11 +27,27 @@ function Project() {
         setShowMoreProjects(!showMoreProjects);
     };
 
-    return <section id="project" className="mx-16 font-jetBrains flex flex-row justify-center items-center gap-x-16 pt-28 md:mx-24 lg:mx-32 xl:mx-40">
-        <div>
-            <h1 className="mb-6 text-xl font-bold sm:mb-10 sm:text-4xl">Explore My Project</h1>
+    return <section id="project" className="mx-6 sm:mx-16 font-jetBrains flex flex-col justify-center items-center pt-28 md:mx-24 lg:mx-32 xl:mx-40">
+        <div className="w-full max-w-7xl">
+            <div className="flex flex-col items-center mb-12 sm:mb-16 text-center">
+                <h1 className="text-3xl font-extrabold sm:text-4xl md:text-5xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-4 tracking-tight">
+                    Explore My Projects
+                </h1>
+                <div className="h-1 w-20 bg-cyan-500 rounded-full"></div>
+            </div>
 
-            <div className="space-y-20 pb-10">
+            <div className="grid grid-cols-1 gap-10 md:gap-14 lg:gap-16 pb-12">
+                <ProjectCard
+                    projectImage={pawslife}
+                    projectName="PawsLife - Pet Adoption Application"
+                    projectExplaination="PawsLife is a web-based pet adoption platform using Laravel to connect shelters with adopters, featuring pet listings, adoption requests, and verification workflows to streamline and digitize the adoption process."
+                    projectIcon1={laravel}
+                    projectIcon2={mysql}
+                    projectIcon3={js}
+                    projectSourceCode="https://github.com/ChristoperChend/Pawslife"
+                    projectLiveDemo="https://pawslife.my.id/adopter/beranda"
+                />
+
                 <ProjectCard
                     projectImage={allergyDiary}
                     projectName="Allergy Diary - Health Application"
@@ -60,7 +79,7 @@ function Project() {
                 />
 
                 {showMoreProjects && (
-                    <>
+                    <div className="grid grid-cols-1 gap-10 md:gap-14 lg:gap-16 animate-fade-in-up">
                         <ProjectCard
                             projectImage={yourList}
                             projectName="YourList - ToDo List Website"
@@ -99,12 +118,18 @@ function Project() {
                             projectIcon1={figma}
                             projectSourceCode="https://www.figma.com/design/EX3m7ih43oBl91TmQkTXlp/2602067054---Christoper-Chendra-(-UTS-HCI-)?m=auto&t=tqjtl3YaERqu3Cqp-6"
                         />
-                    </>
+                    </div>
                 )}
 
-                <button onClick={toggleShowMoreProjects} className="border-2 p-[7px] rounded-xl px-4 font-medium hover:text-cyan-400 mx-auto block bg-[#222831] text-xl hover:scale-110 transition-all duration-200">
-                    {showMoreProjects ? "Show Less" : "More Projects"}
-                </button>
+                <div className="flex justify-center mt-8">
+                    <button
+                        onClick={toggleShowMoreProjects}
+                        className="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-bold text-white transition-all duration-200 bg-gray-800 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-600 hover:bg-gray-700 hover:shadow-[0_0_20px_rgba(6,182,212,0.5)] border border-gray-600 hover:border-cyan-400"
+                    >
+                        {showMoreProjects ? "Show Less Projects" : "Explore More Projects"}
+                        <svg className={`w-5 h-5 ml-2 transition-transform duration-300 ${showMoreProjects ? 'rotate-180' : 'group-hover:translate-y-1'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                </div>
             </div>
         </div>
     </section>;

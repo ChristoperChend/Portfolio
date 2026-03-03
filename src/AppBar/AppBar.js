@@ -7,15 +7,24 @@ function AppBar() {
 
   const colors = ['red', 'green', 'blue', 'purple', 'orange'];
 
+  const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
     const changeColor = () => {
       const randomColor = colors[Math.floor(Math.random() * colors.length)];
       setColor(randomColor);
     };
+    const colorInterval = setInterval(changeColor, 1000);
 
-    const colorInterval = setInterval(changeColor, 600);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
 
-    return () => clearInterval(colorInterval);
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      clearInterval(colorInterval);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const toggleMenu = () => {
@@ -26,42 +35,73 @@ function AppBar() {
     setIsOpen(false);
   };
 
+  const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Project', path: '/project' },
+    { name: 'Certificate', path: '/certificate' },
+    { name: 'Contact', path: '/contact' },
+  ];
+
   return (
-    <nav style={{ backgroundColor: "#252525", color: "#EEEEEE" }} className="font-rubik font-medium py-2 fixed top-0 w-full z-50">
-      <div className="flex justify-between mx-7">
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
+          ? 'bg-[#222831]/80 backdrop-blur-md shadow-lg border-b border-gray-800/50 py-2'
+          : 'bg-transparent py-4'
+        } font-rubik font-medium text-[#EEEEEE]`}
+    >
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center transition-all duration-300">
         <div className='flex items-center'>
-          <h1 className='font-indie text-4xl' style={{ color: color }}>Chr.</h1>
+          <h1 className='font-indie text-3xl md:text-4xl transition-colors duration-1000 ease-in-out font-bold' style={{ color: color }}>
+            Chr.
+          </h1>
         </div>
 
-        <div className="hidden sm:flex space-x-10 items-center">
-          <Link to="/" className="hover:text-cyan-400 transition-colors duration-300">Home</Link>
-          <Link to="/about" className="hover:text-cyan-400 transition-colors duration-300">About</Link>
-          <Link to="/project" className="hover:text-cyan-400 transition-colors duration-300">Project</Link>
-          <Link to="/certificate" className="hover:text-cyan-400 transition-colors duration-300">Certificate</Link>
-          <Link to="/contact" className="hover:text-cyan-400 transition-colors duration-300">Contact</Link>
+        {/* Desktop Menu */}
+        <div className="hidden md:flex space-x-8 lg:space-x-12 items-center">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              to={link.path}
+              className="relative group text-gray-300 hover:text-white transition-colors duration-300 py-2 text-sm lg:text-base tracking-wide"
+            >
+              {link.name}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 opacity-0 group-hover:w-full group-hover:opacity-100"></span>
+            </Link>
+          ))}
         </div>
 
-        <div className="sm:hidden self-center">
-          <button onClick={toggleMenu} className="text-cyan-400 items-end">
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
+        {/* Mobile Menu Button */}
+        <div className="md:hidden flex items-center">
+          <button
+            onClick={toggleMenu}
+            className="text-gray-300 hover:text-cyan-400 focus:outline-none transition-colors p-2"
+            aria-label="Toggle menu"
+          >
+            <div className="w-6 h-5 flex flex-col justify-between relative">
+              <span className={`w-full h-0.5 bg-current transform transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2.5' : ''}`} />
+              <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`} />
+              <span className={`w-full h-0.5 bg-current transform transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+            </div>
           </button>
         </div>
       </div>
 
+      {/* Mobile Menu Dropdown */}
       <div
-        className={`transition-all duration-500 ease-in-out overflow-hidden ${isOpen ? 'max-h-52 opacity-100' : 'max-h-0 opacity-0'}`}
+        className={`md:hidden absolute top-full left-0 w-full bg-[#222831]/95 backdrop-blur-xl border-b border-gray-800 shadow-xl transition-all duration-300 ease-in-out overflow-hidden flex flex-col items-center ${isOpen ? 'max-h-80 opacity-100 py-4' : 'max-h-0 opacity-0 py-0 border-transparent'
+          }`}
       >
-        {isOpen && (
-          <div className="sm:hidden flex flex-col items-center space-y-2 py-3">
-            <Link to="/" className="hover:text-cyan-400 transition-colors duration-300" onClick={closeMenu}>Home</Link>
-            <Link to="/about" className="hover:text-cyan-400 transition-colors duration-300" onClick={closeMenu}>About</Link>
-            <Link to="/project" className="hover:text-cyan-400 transition-colors duration-300" onClick={closeMenu}>Project</Link>
-            <Link to="/certificate" className="hover:text-cyan-400 transition-colors duration-300" onClick={closeMenu}>Certificate</Link>
-            <Link to="/contact" className="hover:text-cyan-400 transition-colors duration-300" onClick={closeMenu}>Contact</Link>
-          </div>
-        )}
+        {navLinks.map((link) => (
+          <Link
+            key={link.name}
+            to={link.path}
+            className="w-full text-center py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200 tracking-wider text-sm"
+            onClick={closeMenu}
+          >
+            {link.name}
+          </Link>
+        ))}
       </div>
     </nav>
   );

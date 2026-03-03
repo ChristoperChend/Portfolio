@@ -13,7 +13,7 @@ function AboutMe() {
                 <h1 className="text-xl text-center font-bold lg:text-3xl lg:mt-10 xl:text-5xl">About Me</h1>
                 <h2 style={{ backgroundColor: "#252525" }} className="p-5 rounded-3xl text-xs md:text-sm lg:text-sm xl:p-10 xl:text-base">
                     <span className="text-red-400">&lt;h2&gt;</span>
-                    <h2 className="ml-10 my-2 font-light">
+                    <h2 className="ml-10 my-2 font-light text-justify">
                         I am a Computer Science student at Binus University with a strong passion for <b className="font-ibm text-orange-600 bg-[#404040] px-1 rounded-md font-bold">Application Developer</b>.
                         My focus lies in mastering the principles and practices that make app development efficient,
                         user-friendly, and scalable.

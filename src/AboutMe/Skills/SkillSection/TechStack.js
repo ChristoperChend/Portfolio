@@ -12,6 +12,7 @@ import android from '../../../Assets/Android.svg'
 import python from '../../../Assets/Python.svg'
 import aspNet from '../../../Assets/AspNet.svg'
 import c from '../../../Assets/c.svg'
+import laravel from '../../../Assets/laravel-2.svg'
 
 function TechStack() {
     return <div className="grid grid-cols-2 mt-4 mb-4 gap-x-5 justify-start lg:grid-cols-3 xl:gap-x-8 xl:grid-cols-3">
@@ -27,6 +28,7 @@ function TechStack() {
         <SkillCard icon={python} name="Python" level="Intermediate"/>
         <SkillCard icon={aspNet} name="ASP.NET" level="Intermediate"/>
         <SkillCard icon={c} name="C++" level="Intermediate"/>
+        <SkillCard icon={laravel} name="Laravel" level="Intermediate"/>
     </div>;
 }
 
