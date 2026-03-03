@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom';
 function AppBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [color, setColor] = useState('white');
-
-  const colors = ['red', 'green', 'blue', 'purple', 'orange'];
-
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    const colors = ['red', 'green', 'blue', 'purple', 'orange'];
     const changeColor = () => {
       const randomColor = colors[Math.floor(Math.random() * colors.length)];
       setColor(randomColor);
@@ -25,7 +23,7 @@ function AppBar() {
       clearInterval(colorInterval);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [colors]);
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -46,8 +44,8 @@ function AppBar() {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
-          ? 'bg-[#222831]/80 backdrop-blur-md shadow-lg border-b border-gray-800/50 py-2'
-          : 'bg-transparent py-4'
+        ? 'bg-[#222831]/80 backdrop-blur-md shadow-lg border-b border-gray-800/50 py-2'
+        : 'bg-transparent py-4'
         } font-rubik font-medium text-[#EEEEEE]`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center transition-all duration-300">
